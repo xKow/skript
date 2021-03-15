@@ -1,0 +1,8 @@
+command /discord:
+	trigger:
+		send "&6Join vores discord her!"
+		send "<link:https://discord.gg/RPBHnkUqZc!>Klik her<reset>"
+command /regler:
+	trigger:
+		send "&6Læs reglerne her!"
+		send "&4https://docs.google.com/document/d/1UJKdNJ6tYx-tIiuRiStgt1S8TTqYpCZFaQNDgi2QIXA/edit?usp=sharing"
