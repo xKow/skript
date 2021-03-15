@@ -1,0 +1,3 @@
+on first join:
+	add 1 to {counter}
+	broadcast "&c&lVELKOMMEN &fã€¢ &fVelkommen &c%player% &fvi hÃƒÂ¥ber nu nyder opholdet! &c&l##%{counter}%"
