@@ -1,0 +1,47 @@
+on first join:
+	set {bjerget} to true
+	set {guldmine} to true
+	set {templet} to true
+
+
+on region enter:
+	if "%event-region%" contains "bjerget":
+		if {bjerget} is true:
+			send player title "&cBjerget" with subtitle "&eNy zone opdaget!" for 3 seconds
+			play raw sound "note.bass" at event-location with pitch 1 volume 0.5
+			send "&c&lZONE &7> &fDu har unlocked en ny zone! Se alle dine opdagede zoner med /zoner"
+			set {bjerget} to false
+
+on region enter:
+	if "%event-region%" contains "templet":
+		if {templet} is true:
+			send player title "&cTemplet" with subtitle "&eNy zone opdaget!" for 3 seconds
+			play raw sound "note.bass" at event-location with pitch 1 volume 0.5
+			send "&c&lZONE &7> &fDu har unlocked en ny zone! Se alle dine opdagede zoner med /zoner"
+			set {templet} to false
+
+
+command /fjern:
+	trigger:
+		set {bjerget} to true
+		set {guldmine} to true
+		set {templet} to true
+
+
+command /zoner:
+	aliases: zone
+	trigger:
+		open virtual chest with 1 row named "&c&lZONER" to player
+		if {templet} is true:
+			make gui slot 0 of player with gray dye named "&cTemplet" with lore "&7Ikke opdaget." to close
+		if {templet} is false:
+			make gui slot 0 of player with 351:10 named "&cTemplet" with lore "&aOpdaget." to close
+		if {guldmine} is true:
+			make gui slot 1 of player with gray dye named "&cGuldminen" with lore "&7Ikke opdaget." to close
+		if {guldmine} is false:
+			make gui slot 1 of player with 351:10 named "&cGuldminen" with lore "&aOpdaget." to close
+		if {bjerget} is true:
+			make gui slot 2 of player with gray dye named "&cBjerget" with lore "&7Ikke opdaget." to close
+		if {bjerget} is false:
+			make gui slot 2 of player with 351:10 named "&cBjerget" with lore "&aOpdaget." to close
+
