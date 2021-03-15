@@ -1,0 +1,118 @@
+#Options
+options:
+	#Ændre prefixed der står i chatten.
+	prefix: &6&lDOH RANKUP &8&l> &6
+    
+    #Priser for at rankup
+	prisb: 75000
+	prisbvagt: 50000 
+
+
+command /rankup:
+	trigger:
+		send "&6&lEr du sikker på du vil ranke op? Hvis ja så skriv &c&l/rankupja - &4&lhusk at sælge din celle inden du ranker op!"
+
+command /rankupja:
+	trigger:
+		if player has permission "C":
+			if player's balance is between 75000 and 69696966969:
+				remove 75000 from player's balance
+				console command "/manuadd %player% b"
+				broadcast ""
+				broadcast "{@prefix} &7%player% rankede op fra &cC &7til &bB!"
+				broadcast ""
+				console command "/spawn %player%"
+				console command "/eco set %player% 30"
+				console command "nte player %player% prefix &8[&2B&8]&2"
+				console command "clear %player%"
+
+
+				give player 1 of iron pickaxe
+				set {rank.%player%} to "b"
+			else:
+				message "{@prefix} &7Det koster 75000 for at rankup"
+				stop
+		
+				
+		if player has permission "cvagt":
+			if player's balance is greater than or equal to 50000:
+				remove 50000 from player's balance
+				console command "/manuadd %player% bvagt"
+				broadcast ""
+				broadcast "{@prefix} &7%player% rankede op fra &cC-Vagt &7til &bB-Vagt"
+				broadcast ""
+				console command "/spawn %player%"
+				console command "/eco set %player% 30"
+				console command "nte player %player% prefix &8[&9B-Vagt&8]&2"
+				console command "clear %player%"
+
+
+
+				set {rank.%player%} to "bvagt"
+			else:
+				message "{@prefix} &7Det koster 50000 for at rankup"
+				stop
+
+		if player has permission "donatorc":
+			if player's balance is greater than or equal to 75000:
+				remove 50000 from player's balance
+				console command "/manuadd %player% bdon"
+				broadcast ""
+				broadcast "{@prefix} &7%player% rankede op fra &cC Donator &7til &bB Donator"
+				broadcast ""
+				console command "/spawn %player%"
+				console command "/eco set %player% 30"
+				console command "nte player %player% prefix &8[&2B&8]&2"
+				console command "clear %player%"
+
+
+
+				set {rank.%player%} to "bdon"
+			else:
+				message "{@prefix} &7Det koster 75000 for at rankup"
+
+				stop
+
+
+		if player has permission "donator+c":
+			if player's balance is greater than or equal to 75000:
+				remove 75000 from player's balance
+				console command "/manuadd %player% bdon+"
+				broadcast ""
+				broadcast "{@prefix} &7%player% rankede op fra &cC Donator+ &7til &bB Donator+"
+				broadcast ""
+				console command "/spawn %player%"
+				console command "/eco set %player% 30"
+				console command "nte player %player% prefix &8[&2B&8]&2"
+				console command "clear %player%"
+
+
+
+				set {rank.%player%} to "bdon+"
+			else:
+				message "{@prefix} &7Det koster 75000 for at rankup"
+
+				stop
+
+
+		if player has permission "dohc":
+			if player's balance is greater than or equal to 75000:
+				remove 75000 from player's balance
+				console command "/manuadd %player% bdoh"
+				broadcast ""
+				broadcast "{@prefix} &7%player% rankede op fra &cC DOH &7til &bB DOH"
+				broadcast ""
+				console command "/spawn %player%"
+				console command "/eco set %player% 30"
+				console command "nte player %player% prefix &8[&2B&8]&2"
+				console command "clear %player%"
+
+
+				set {rank.%player%} to "bdoh"
+			else:
+				message "{@prefix} &7Det koster 75000 for at rankup"
+				stop
+
+
+
+		
