@@ -1,0 +1,7 @@
+command /bc [<text>]:
+	permission: staff
+	permission message: Du er ikke staff.
+	trigger:
+		broadcast " "
+		broadcast "&8&l[&6&lDOH&8&l]&8&l > &6%arg-1%"
+		broadcast " "
