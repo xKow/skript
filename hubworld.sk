@@ -2,11 +2,11 @@ on block damage:
 	if event-block is a log:
 		if "%region at player%" contains "trae":
 			if player is in world "World":
-					cancel event
-					wait 1.5 second
-					set {drop} to event-block's location
-					drop 1 17:0 at {drop}
-					set event-block to air
-					wait 10 seconds
-					set event-block to 17:0
-					stop
+				cancel event
+				wait 1.5 second
+				set {drop} to event-block's location
+				drop 1 17:0 at {drop}
+				set event-block to air
+				wait 10 seconds
+				set event-block to 17:0
+				stop
