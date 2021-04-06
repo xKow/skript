@@ -1,2 +1,2 @@
-# skript
-Min side hvor jeg deler en masse af mine skripts til minecraft.
+# Skript
+Der ligger en masse skrald skripts her som jeg bare lige skulle gemme, gør hvad du vil med dem.
