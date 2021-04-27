@@ -1,3 +1,5 @@
+#dette blev brugt på lunity og er sådan block smadring fungerede
+
 on block damage:
 	if event-block is a log:
 		if "%region at player%" contains "trae":
