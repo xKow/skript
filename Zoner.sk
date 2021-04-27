@@ -1,3 +1,6 @@
+#alle variabler skal ændres til at sættes ved spillere istedet for hele variablen. F.eks. set {%uuid of player%.bjerget} to true
+#orker ikke lige selv fordi
+
 on first join:
 	set {bjerget} to true
 	set {guldmine} to true
